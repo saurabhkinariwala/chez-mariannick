@@ -1,0 +1,233 @@
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap/scss/variables';
+@import '../../css/flaticon.css';
+    //   App.scss Code starts
+
+$font-primary: 'Poppins',Arial, sans-serif;
+$font-secondary: 'Josefin Sans',Arial, sans-serif;
+$font-tertiary: 'Nothing You Could Do', cursive;
+
+$white: #fff;
+$black: #000;
+$darken: #121618;
+
+$primary: #fac564;
+$secondary: #f8b500;
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($transition) {
+    -moz-transition:    all $transition ease;
+    -o-transition:      all $transition ease;
+    -webkit-transition: all $transition ease;
+    -ms-transition: 		all $transition ease;
+    transition:         all $transition ease;
+}
+//PRICING
+.pricing-entry{
+	width: 100%;
+	display: block;
+	margin-bottom: 30px;
+	.img{
+		width: 60px;
+		height: 60px;
+		@include border-radius(50%);
+	}
+	.desc{
+		width: calc(100% - 60px);
+		p{
+			margin-bottom: 0;
+		}
+	}
+	.text{
+		width: 100%;
+		display: block;
+		position: relative;
+		z-index: 0;
+		&:after{
+			position: absolute;
+			bottom: 35%;
+			left: 0;
+			right: 0;
+			content: '';
+			width: 100%;
+			height: 1px;
+			border-bottom: 1px dashed darken($primary,30%);
+			z-index: -1;
+		}
+		h3{
+			width: calc(100% - 80px);
+			font-size: 18px;
+			span{
+				background: $darken;
+				background: url(/images/bg_4.jpg) no-repeat fixed;
+				padding-right: 20px;
+			}
+		}
+		.price{
+			width: 80px;
+			color: $primary;
+			text-align: right;
+			background: $darken;
+			background: url(/images/bg_4.jpg) no-repeat fixed;
+			font-size: 16px;
+		}
+	}
+}
+
+//MENU
+.ftco-menu{
+	.f-menu-img{
+		@include media-breakpoint-down(md){
+			height: 300px;
+		}
+	}
+}
+.menu-wrap{
+	.menu-img{
+		display: block;
+		width: 200px;
+		height: 200px;
+		margin: 0 auto;
+		@include border-radius(50%);
+	}
+	.text{
+		h3{
+			font-size: 22px;
+			a{
+				color: $white;
+			}
+		}
+		.price{
+			font-size: 16px;
+			font-weight: 400;
+			span{
+				color: $primary;
+			}
+		}
+	}
+}
+
+.heading-section{
+	.subheading{
+		font-size: 14px;
+		display: block;
+		margin-bottom: 10px;
+	}
+	h2{
+		font-size: 30px;
+		font-weight: 400;
+		position: relative;
+		text-transform: uppercase;
+		@include media-breakpoint-down(sm){
+			font-size: 28px;
+		}
+		span{
+			color: $primary;
+		}
+	}
+	p.flip{
+		position: relative;
+		display: block;
+		width: 100%;
+		&:after{
+			position: absolute;
+			bottom: 4px;
+			left: -100px;
+			right: 0;
+			content: '';
+			width: 40px;
+			height: 1px;
+			background: darken($primary,40%);
+			margin: 0 auto;
+		}
+		&:before{
+			position: absolute;
+			bottom: 4px;
+			left: 100px;
+			right: 0;
+			content: '';
+			width: 40px;
+			height: 1px;
+			background: darken($primary,40%);
+			margin: 0 auto;
+		}
+		span{
+			position: absolute;
+			&.deg1{
+				position: absolute;
+				bottom: 2px;
+				left: -30px;
+				right: 0;
+				width: 6px;
+				height: 6px;
+				content: '';
+				background: $primary;
+				transform: rotate(135deg);
+				margin: 0 auto;
+			}
+			&.deg2{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: 10px;
+				height: 10px;
+				content: '';
+				background: $primary;
+				transform: rotate(135deg);
+				margin: 0 auto;
+			}
+			&.deg3{
+				position: absolute;
+				bottom: 2px;
+				left: 30px;
+				right: 0;
+				width: 6px;
+				height: 6px;
+				content: '';
+				background: $primary;
+				transform: rotate(135deg);
+				margin: 0 auto;
+			}	
+		}	
+	}
+}
+.heading-section-dark{
+	h2{
+		color: $black;
+	}
+	p.flip{
+		position: relative;
+		display: block;
+		width: 100%;
+		&:after{
+			position: absolute;
+			bottom: 4px;
+			left: -100px;
+			right: 0;
+			content: '';
+			width: 40px;
+			height: 1px;
+			background: darken($primary,0);
+			margin: 0 auto;
+		}
+		&:before{
+			position: absolute;
+			bottom: 4px;
+			left: 100px;
+			right: 0;
+			content: '';
+			width: 40px;
+			height: 1px;
+			background: darken($primary,0);
+			margin: 0 auto;
+		}
+	}
+}

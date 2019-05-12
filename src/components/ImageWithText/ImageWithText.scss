@@ -1,0 +1,47 @@
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap/scss/variables';
+
+$font-primary: 'Poppins',Arial, sans-serif;
+$font-secondary: 'Josefin Sans',Arial, sans-serif;
+$font-tertiary: 'Nothing You Could Do', cursive;
+
+$white: #fff;
+$black: #000;
+$darken: #121618;
+
+$primary: #fac564;
+$secondary: #f8b500;
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($transition) {
+    -moz-transition:    all $transition ease;
+    -o-transition:      all $transition ease;
+    -webkit-transition: all $transition ease;
+    -ms-transition: 		all $transition ease;
+    transition:         all $transition ease;
+}
+
+.ftco-about{
+	.one-half{
+		width: 100%;
+		padding: 30px 15px;
+		@include media-breakpoint-up(md){
+			padding: 5%;
+			width: 50%;
+		}
+		&.img{
+            display: block;
+            background: url(/images/about.jpg);
+			@include media-breakpoint-down(sm){
+				height: 300px;
+			}
+		}
+	}
+}

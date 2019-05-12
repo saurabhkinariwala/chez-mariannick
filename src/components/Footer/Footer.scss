@@ -1,0 +1,90 @@
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap/scss/variables';
+
+$font-primary: 'Poppins',Arial, sans-serif;
+$font-secondary: 'Josefin Sans',Arial, sans-serif;
+$font-tertiary: 'Nothing You Could Do', cursive;
+
+$white: #fff;
+$black: #000;
+$darken: #121618;
+
+$primary: #fac564;
+$secondary: #f8b500;
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($transition) {
+    -moz-transition:    all $transition ease;
+    -o-transition:      all $transition ease;
+    -webkit-transition: all $transition ease;
+    -ms-transition: 		all $transition ease;
+    transition:         all $transition ease;
+}
+
+
+//INTRO
+.ftco-intro{
+	.wrap{
+		width: 100%;
+		.info{
+			background: $black;
+			padding: 30px;
+			@include media-breakpoint-up(xl){
+				width: calc(100% - 35%);
+				padding: 2% 5% 2% 12%;
+			}
+			@include media-breakpoint-down(sm){
+				width: 100%;
+			}
+			p{
+				margin-bottom: 0;
+			}
+		}
+		.social{
+			width: 35%;
+			background: $primary;
+			@include media-breakpoint-down(sm){
+				width: 100%;
+			}
+			.social-icon{
+				margin: 0;
+				padding: 0;
+				li{
+					list-style: none;
+					display: inline-block;
+					line-height: 0;
+					padding: 0 10px;
+					a{
+						display: block;
+						margin: 0;
+						padding: 0;
+						span{
+							color: $white;
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+		h3{
+			font-size: 16px;
+		}
+		.text{
+			width: calc(100% - 40px);
+		}
+		.icon{
+			width: 40px;
+			span{
+				color: $primary;
+				font-size: 20px;
+			}
+		}
+	}
+}

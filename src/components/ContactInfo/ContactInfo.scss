@@ -1,0 +1,120 @@
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap/scss/variables';
+
+$font-primary: 'Poppins',Arial, sans-serif;
+$font-secondary: 'Josefin Sans',Arial, sans-serif;
+$font-tertiary: 'Nothing You Could Do', cursive;
+
+$white: #fff;
+$black: #000;
+$darken: #121618;
+
+$primary: #fac564;
+$secondary: #f8b500;
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($transition) {
+    -moz-transition:    all $transition ease;
+    -o-transition:      all $transition ease;
+    -webkit-transition: all $transition ease;
+    -ms-transition: 		all $transition ease;
+    transition:         all $transition ease;
+}
+
+//PAGINATION
+.block-27 {
+	ul {
+		padding: 0;
+		margin: 0;
+		li {
+			display: inline-block;
+			margin-bottom: 4px;
+			font-weight: 400;
+			a,span {
+				color: $primary;
+				text-align: center;
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				border-radius: 50%;
+				border: 1px solid darken($primary,30%);
+			}
+			&.active {
+				a, span {
+					background: $primary;
+					color: $white;
+					border: 1px solid transparent;
+				}
+			}
+		}
+	}
+}
+
+.contact-section {
+	.contact-info{
+		p{
+			a{
+			}
+			span{
+				color: $white;
+			}
+		}
+	}
+}
+
+
+.contact-form{
+	.form-group{
+		position: relative;
+	}
+	.form-control {
+		border: transparent !important;
+		border-bottom: 1px solid rgba(255,255,255,.08) !important;
+		height: 58px!important;
+		padding-left: 0;
+		padding-right: 0; 
+		background: transparent!important;
+		color: rgba(255,255,255,.9) !important;
+		font-size: 13px;
+		border-radius: 0px;
+		box-shadow: none!important;
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		  color: rgba(255,255,255,.9);
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+		  color: rgba(255,255,255,.9);
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+		  color: rgba(255,255,255,.9);
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+		  color: rgba(255,255,255,.9);
+		}
+		&:focus, &:active {
+			border-color: $primary !important;
+		}
+	}
+	textarea.form-control {
+		height: inherit!important;
+	}
+}
+
+
+.block-9 {
+
+	.form-control {
+		outline: none!important;
+		box-shadow: none!important;
+		font-size: 15px;
+	}
+	#map {
+	}
+}
